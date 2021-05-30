@@ -1,0 +1,38 @@
+<!-- <h2 class="text-center">All Users</h2>
+<app-user-item *ngFor="let u of users" [user]="u" ></app-user-item> -->
+<!-- ---------------------------------------------------------------------------  -->
+
+<p class="text-center mt-5">
+    <button class="btn btn-success text-center" (click)="goToAddUser()"> New User  </button>
+</p>
+<h2 class="text-center">All Users</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-warning table-bordered text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">View</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of users" >
+                        <td>{{ u.id }}</td>
+                        <td>{{ u.name }}</td>
+                        <td>{{ u.email }}</td>
+                        <td>{{ u.phone }}</td>
+                        <td><button class="btn btn-info" (click)="viewUser(u.id)">view</button></td>
+                        <td><button href="#"class="btn btn-primary"(click)="updateUser(u.id)">update</button></td>
+                        <td> <button href="#"class="btn btn-danger"(click)="deleteUser(u.id)">delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

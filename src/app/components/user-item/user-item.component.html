@@ -1,0 +1,10 @@
+<div class="alert alert-dark container" >
+    <div class="d-flex justify-content-around">
+        <h3>  {{user.name}} </h3>
+        <h3><a class="btn btn-info" routerLink="{{user.id}}">View</a></h3>
+        <h3><a class="btn btn-primary" routerLink="edit">Update</a></h3>
+        <h3><a class="btn btn-danger"  (click)="deleteUser(user.id)" >Delete</a></h3>
+    </div>
+    
+
+</div>

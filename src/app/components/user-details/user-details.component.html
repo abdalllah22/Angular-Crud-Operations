@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-1 col-10 mt-5">
+            <div class="card text-center mt-5">
+                <div class="card-header bg-info">User Info</div>
+                <div class="card-body" *ngIf = "user == '[object Object]'; else NoData">
+                    <h5 class="card-title"> {{ user.id}}</h5>
+                    <p class="card-text">
+                    <b>Full Name:</b> {{user.name}} <br>
+                    <b>Email :</b>  {{user.email}}<br>
+                    <b>Phone :</b>  {{user.phone}}<br>
+                    </p>
+                </div>
+                <ng-template #NoData>
+                    <div class="text-center">
+                        <h2>Loading Data......</h2>
+                    </div>
+                </ng-template>
+                <div class="card-footer text-muted bg-info">More Info Soon</div>
+            </div>
+        </div>
+    </div>
+</div>
+
